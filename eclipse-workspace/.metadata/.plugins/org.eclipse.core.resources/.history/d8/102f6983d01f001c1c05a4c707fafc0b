@@ -1,0 +1,44 @@
+import java.util.HashMap;
+
+public class FirstnonrepeatingChar {
+
+	public static void main(String[] args) {
+		firstnonrepeatingchsr()
+
+	}
+
+	private static  Character firstnonrepeatingchsr(String  str) {
+		
+		int freq = 1;
+		HashMap<Character,Integer> hs = new HashMap<>();
+		for(int i =0;i<str.length();i++)
+		{
+		    if(hs.containsKey(str.charAt(i)))
+		    {
+		    	hs.put(str.charAt(i),freq++);
+		    }
+		    else
+		    {
+		    	hs.put(str.charAt(i),1);
+		    }
+		 
+		}
+		for(int i =0;i<str.length();i++)
+		{
+			if(hs.containsValue(1))
+					{
+				hs.get(1);
+					}
+					
+		}
+		}
+		
+		
+		
+		
+		
+	}
+	
+	
+
+}

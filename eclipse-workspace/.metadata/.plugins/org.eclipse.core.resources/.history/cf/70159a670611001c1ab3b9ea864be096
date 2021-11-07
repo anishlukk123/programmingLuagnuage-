@@ -1,0 +1,28 @@
+package Arrays;
+
+public class Array {
+	
+	 int[]items;
+	 int count;
+	 
+	 public Array(int length)
+
+	 {
+		 items = new int[length];
+		 count =0;
+	 }
+	 public void insert(int data)
+	 {
+		 while(count!=items.length)
+		 {
+			 items[count] = data;
+			 count++;
+		 }
+		  
+	 }
+	 
+	 public  String Tostring(int[]items)
+	 {
+		 return items.toString();
+	 }
+}

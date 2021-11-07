@@ -1,0 +1,59 @@
+package FinalExam;
+
+import java.util.ArrayList;
+
+class Questio2 {
+
+	   /** Initialize your data structure here. */
+	ArrayList<Integer> Hashset;
+	public Questio2() {
+	   Hashset=new ArrayList<>();
+	}
+
+	public void  add(int key) {
+	    if(Hashset.contains(key)==false) // if the value is not in the hashset previous , add it to the hashet; 
+	        Hashset.add(key);
+	}
+
+	public  String  remove(int key) {
+	  if(Hashset.contains(key))
+	  {
+	      Hashset.remove(Hashset.indexOf(key));
+	      return "removed";
+	  
+	}
+	  else
+	  {
+		  return "Hey value does not exist at all";
+	  }
+	}
+
+	/** Returns true if this set contains the specified element */
+	public String contains(int key) {
+	     if(Hashset.contains(key))
+	     {
+	    	 return "true";
+	     }
+	     else
+	    	 
+	     {
+	    	 return "nothing here";
+	     }
+	}
+	
+	
+	public static void main (String[] args)
+	{
+	  Questio2 hash_set = new Questio2();
+
+	hash_set.add(1);
+	hash_set.add(2);
+	hash_set.add(3);
+	hash_set.add(4);
+	System.out.println(hash_set.contains(5));// should return false
+	System.out.println(hash_set.contains(4));// should return  true
+	
+	
+	}
+	}
+

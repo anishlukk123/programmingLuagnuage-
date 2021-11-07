@@ -1,0 +1,33 @@
+package twostack;
+
+import java.util.Arrays;
+
+public class hello {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+ twostacks twostack = new  twostacks(4);
+ twostack.push1(5);
+ twostack.push2(5);
+ twostack.push1(2);
+ twostack.push2(3);
+ twostack.push1(7);
+ System.out.println( twostack.pop1());
+ System.out.println( twostack.pop1());
+ System.out.println( twostack.pop2());
+ System.out.println( twostack.pop2());
+
+ System.out.println(twostack.isfull1());
+ System.out.println(twostack.isempty1());
+ System.out.println(twostack.isempty2());
+ 
+ 
+ 
+ 
+ 
+ 
+
+		
+	}
+
+}

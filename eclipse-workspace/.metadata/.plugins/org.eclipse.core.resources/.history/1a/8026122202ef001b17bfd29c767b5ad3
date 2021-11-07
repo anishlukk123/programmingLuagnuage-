@@ -1,0 +1,53 @@
+package FinalExam;
+
+
+import java.util.List;
+class Question2 {
+	List<Integer> s;;//=start-with-100-elements-for-fast-initialization
+  
+public void add(int key) {
+if(!s.contains(key))
+		{ 
+s.add(key);
+		}
+}
+  
+public void remove(int key) {
+if(s.contains(key)) /*-->if-array-is too--small-to-accomodate-key,-extend-it*/
+	
+	s.remove(s.indexOf(key));
+}
+  
+/*-->Returns-true-if-this-set-contains-the-specified-element<--*/
+public  String  contains(int key) {
+	
+ if(!s.contains(key))
+ {
+	 return "Nothing here ";
+ }
+ else
+ {
+	 return "true";
+ }
+}
+  
+
+
+public static void main (String[] args)
+{
+Question2 hash_set = new Question2();
+ String  x;
+hash_set.add(1);
+hash_set.add(2);
+x=hash_set.contains(1); // returns true
+System.out.println("1 is found?-->"+x);
+x=hash_set.contains(3); // returns false (not found)
+System.out.println("3 is found?-->"+x);
+hash_set.add(2);
+hash_set.contains(2); // returns true
+System.out.println("2 is found?-->"+x);
+hash_set.remove(2);
+hash_set.contains(2); // returns false (already removed)
+System.out.println("2 is found?-->"+x);
+}
+}

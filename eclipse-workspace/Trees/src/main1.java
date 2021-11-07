@@ -1,0 +1,35 @@
+
+public class main1 {
+
+	public static void main(String[] args) {
+
+		var tree = new Bst();
+		tree.insert(7);
+		tree.insert(4);
+		tree.insert(9);
+		tree.insert(1);
+		tree.insert(6);
+		tree.insert(8);
+		tree.insert(10);
+		
+		var tree2 = new Bst();
+		tree2.insert(7);
+		tree2.insert(4);
+		tree2.insert(9);     // 7
+		                    // 4   9
+		                    // 1 6  8       10            
+		tree2.insert(1);
+		tree2.insert(2);
+		tree2.insert(8);
+		tree2.insert(10);
+		System.out.println(tree.min());
+		System.out.println(tree.height());
+		System.out.println(tree.equals(tree2));
+		
+		
+		
+		
+		
+		
+	}
+}

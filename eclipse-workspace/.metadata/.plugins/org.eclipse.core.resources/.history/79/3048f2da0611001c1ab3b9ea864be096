@@ -1,0 +1,18 @@
+package Arrays;
+
+import java.util.Arrays;
+
+public class main {
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		 Array arr = new Array(5);
+		 arr.insert(0);
+		 arr.insert(1);
+		 arr.insert(2);
+		 System.out.println(Arrays.toString(arr));
+	}
+
+}

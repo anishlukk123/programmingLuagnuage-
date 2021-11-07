@@ -1,0 +1,106 @@
+package LinkedList;
+public class LinkedList {
+
+	private  class Node
+	{
+		int value;
+		
+		Node next;
+		
+		
+		public Node(int value)
+		{
+			this.value = value;
+		}
+	}
+	
+	
+	private Node head;
+    private Node  tail;
+    
+   
+
+	public void addlast(int item) {
+		// TODO Auto-generated method stub
+		
+		
+	var  node = new Node(item);
+			
+			
+			if(head == null)
+			{
+				head= node;
+				tail= node;
+			}
+			else
+			{
+				
+				tail.next = node;
+				tail = node;
+		}
+
+		
+	}
+	 public void addfirst(int item)
+	 {
+			var  node = new Node(item);
+			
+		 if(head==null)
+		 {
+			 head = tail = node;
+		 }
+		 else
+		 {
+			node.next = head;
+			head = node;
+			
+		 }
+	 }
+		public  int indexof(int item)
+		{
+			 int index =0;
+			  var  current = head;
+					 while(current!=null)
+					 {
+						 if(current.value !=item) 
+						
+						 {
+							 current = current.next;
+							  index++;
+						 }
+						 else
+						 {
+							 return index;
+						 }
+						
+					 }
+			
+			
+			
+			return -1;
+		
+		
+	 }
+		public boolean contains(int item)
+		{
+			return  indexof(item)!=-1;
+			
+		}
+		
+		public  void  removefirst()
+		{
+			if(head != null)
+			{
+          var headnext = head.next;
+          head.next = null;
+           head = headnext;
+			}
+		}
+ 
+	
+	
+
+}
+
+
+

@@ -1,0 +1,36 @@
+import java.util.Arrays;
+
+public class PriortyQueue {
+ int[]items = new int[5];
+ private int count;
+ 
+ public void enque(int val)   // [1,2,3,4,5,5}  val 2
+ {
+	 int i;
+	 for(i= count-1;i>=0;i--)
+	 {
+		 if(items[i]>val)
+		 {
+			 items[i+1] = items[i];
+		 }
+		 else 
+		 {
+			 break;
+		 }
+		 
+	 }
+	 items[i+1] = val;
+	 count++;
+
+	
+ }
+ 
+ public   String  ToString()
+ {
+	 return  Arrays.toString(items);
+ }
+}
+
+
+
+

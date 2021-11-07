@@ -1,0 +1,37 @@
+package logicprograming;
+
+import java.util.Scanner;
+
+public class countdigits {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		digitcount();
+	}
+
+	private static int  digitcount() {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("enter  the number");
+		int  num = scan.nextInt();
+		int count =0;
+		if(num%10 == 0)
+		{
+			count =1;
+		}
+		
+		
+		
+		System.out.print(count);
+		return count; 
+		
+	  
+	
+	}
+	
+	}
+
+
+

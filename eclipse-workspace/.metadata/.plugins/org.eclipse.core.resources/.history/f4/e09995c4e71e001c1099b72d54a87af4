@@ -1,0 +1,14 @@
+import java.util.Stack;
+
+public  class StackeWithTwoQueus {
+	
+	
+	
+	
+	public class push(int val)
+	{
+		s.push(val);
+	}
+	
+
+}

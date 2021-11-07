@@ -1,0 +1,14 @@
+package LinkedList;
+
+public class runner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		var linkedlist = new Linkedlist();
+		linkedlist.addfirst10);
+		linkedlist.addfirst(1);
+	}
+
+}

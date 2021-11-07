@@ -1,0 +1,11 @@
+
+public class main1 {
+
+	public static void main(String[] args) {
+		
+		poupulatebinarysearchtree  tree =   new poupulatebinarysearchtree();
+		tree.insert(0);
+		tree.insert(1);
+       System.out.println(tree.find(5));
+	}
+}

@@ -1,0 +1,202 @@
+
+public class Bst {
+	
+	
+	private class node
+	{
+		private int value;
+		private node left;
+		private node right;
+		
+		public node(int value)
+		{
+			this.value = value;
+			left = null;
+			right = null;
+		}
+		
+	
+	}
+
+
+ node root;
+	
+
+	    
+	    public void insert(int value)
+	    {
+	    
+	    	if(root == null)
+	    	{
+	    	 node  node  = new node(value);
+	    		root = node;
+	    		return;
+	    	}
+	    	else
+	    	{
+	    		node  node = new node(value);
+	    		node  current = root;
+	    		while(current!=null)
+	    		{
+		    			if(node.value<current.value)
+		    			{
+		    				if(current.left==null)
+		    				{
+		    					current.left = node;
+		    					return;
+		    				}
+			    		
+			    			current = current.left;
+			    		}
+		    			else if(node.value>current.value)
+		    				
+			    		{
+		    				if(current.right==null)
+		    				{
+		    					current.right = node;
+		    					return;
+		    				}
+			    			current = current.right;
+			    		}
+	    			
+	    	
+	    		
+	    		}
+	    	}
+	    	
+	    	}
+	   public boolean find (int value) 
+	   {
+		   node  current = root;
+   		    while(current!=null)
+   		{
+	    			if(value>current.value)
+		    		{
+		    			current = current.right;
+		    		}
+	    			else if(value<current.value)
+		    		{
+		    			current = current.left;
+		    		}
+	    			else if(current.value== value)
+	    			{
+	    				return true;
+	    			}
+   			
+   		}
+		   
+		   
+		   return false;
+		   
+	   }
+	   public  void preordertrsversal()
+	   {
+		   
+		   preordertrsversal(root); 
+		 
+	   
+	   }
+	   private  void preordertrsversal(node root)
+	   
+	   {
+		   
+		   if(root == null)
+			   return;
+		   
+		   System.out.print(root.value);
+		   preordertrsversal(root.left);
+		   preordertrsversal(root.right);
+		   
+		   
+	   }
+	   public  void inordertrsversal()
+	   {
+		   
+		   inordertrsversal(root); 
+		 
+	   
+	   }
+	   
+	   public  void postordertrsversal()
+	   {
+		   
+		   postordertrsversal(root); 
+		 
+	   
+	   }
+	   
+	   
+	   
+	   
+	   
+  private  void inordertrsversal(node root)
+	   
+	   {
+		   
+		   if(root == null)
+			   return;
+		   
+		   postordertrsversal(root.left);
+		   postordertrsversal(root.right);
+		   System.out.print(root.value);
+		   
+		   
+	   }
+  
+  private  void postordertrsversal(node root)
+  
+  {
+	   
+	   if(root == null)
+		   return;
+	   
+	   inordertrsversal(root.left);
+	   System.out.print(root.value);
+	   inordertrsversal(root.right);
+	   
+	   
+  }
+  
+ public   int min()
+  
+  {
+	   
+    return min(root);
+		 
+	   
+	   
+  }
+  
+  
+ private  int min(node root)
+  
+  {
+	 if(root.left == null && root.right ==null )
+		   return 0;
+	   
+	   
+ var minleft = min(root.left);
+ var minright = min(root.right);
+ var min = Math.min(minleft, minright);
+  return min;
+		 
+	   
+	   
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+	    }
+	
+
+	
+
+
+

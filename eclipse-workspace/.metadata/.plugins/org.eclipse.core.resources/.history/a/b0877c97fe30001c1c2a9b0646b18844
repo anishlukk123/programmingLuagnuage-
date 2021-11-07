@@ -1,0 +1,232 @@
+
+
+public class BinarySearchtree {
+	
+	private class node
+	{
+		private node right;
+		private node left;
+		private  int val;
+		
+		public node(int value)
+		{
+			val= value;
+		}
+		
+	}
+	
+  node root;
+  
+  public void inset(int val)
+  {
+	  var current = root;
+	  var node = new node(val);
+	   if(current == null)
+	   {
+		   root = node;
+	   }
+	   else
+	   {
+		 while(current!=null)
+		 { 
+			 if(node.val>current.val)
+			 {
+				 if(current.right==null)
+				 {
+					 current.right = node;
+					 break;
+				 }
+				 else
+				 {
+					  current = current.right;
+			 }
+			 }
+			 else  if(node.val<current.val)
+			 {
+				 if(current.left==null)
+				 {
+					 current.left = node;
+					 break;
+				 }
+				 else
+				 {
+					  current =  current.left;
+				 }
+				 
+			 }
+		 }
+			 
+		 }
+
+	
+
+}
+  
+   public boolean find(int val)
+   {
+	  var current =  root;
+	  while(current!=null)
+	  {
+		  if(val>current.val)
+		  {
+			  current = current.right;
+		  }
+		  else if(val<current.val)
+		  {
+			  current = current.left;
+		  }
+		  else   
+		  {
+			  return  true;
+		  }
+	  }
+	   
+	   
+	   return false;
+	   
+   }  
+   private  void preordertraversal(node root)
+   {
+	   if(root== null)
+		   return;
+	   
+	  
+	   
+		      System.out.print(root.val);
+		    preordertraversal(root.left);
+		    preordertraversal(root.right);
+	
+	    
+   }
+   public  void inordertraversal()
+   {
+	   inordertraversal(root);
+   }
+   private  void inordertraversal(node root)
+   {
+	   if(root== null)
+		   return;
+	   
+	  
+	         inordertraversal(root.left);
+		      System.out.print(root.val);
+		    inordertraversal(root.right);
+	
+	    
+   }
+   public  void preordertraversal()
+   {
+	   preordertraversal(root);
+   }
+   public  void postordertraversal()
+   {
+	   postordertraversal(root);
+   }
+   private  void postordertraversal(node root)
+   {
+	   if(root== null)
+		   return;
+	   
+	  
+	         inordertraversal(root.left);
+	         inordertraversal(root.right);
+		      System.out.print(root.val);
+	
+   }
+   public  int height()
+   {
+	   return height(root);
+   }
+   private  int  height(node root)
+   {
+	   if(root.left== null&&root.right == null)
+		   return 0;
+	   
+	  
+	          var leftheight = height(root.left);
+	          var rightheight = height(root.right);
+	          return 1+Math.max(leftheight, rightheight);
+	
+   }
+   
+   
+   private int min(node root)
+  
+   {
+	   if(root.left == null&& root.right == null)
+	   {
+		   return root.val;
+	   }
+	   var leftmin = min(root.left);
+	   var rightmin = min(root.right);
+	   
+	   return Math.min(leftmin, rightmin);
+	   
+   }
+   
+   public  int min()
+   {
+	   return min(root);
+   }
+   
+   private boolean equals(node  first ,node second)
+   {
+	  if(first == null&&second == null)               
+		  return true;
+	   
+	  return first.val == second.val&& equals(first.left,second.left)&&equals(first.right,first.right);
+   
+   }
+   public  boolean equals( BinarySearchtree tree )
+   {
+	
+	   
+	    return equals(root,tree.root);
+   
+   }
+   
+   
+   private  boolean isvalid(node root)
+   {
+	   if(root.left == null&& root.right == null)
+	   {
+		   return  true;
+	   }
+	   var current = root;
+	   
+	   if(current.val>current.right.val)
+	   {
+		    return false;
+	   }
+	   else
+	   {
+		   isvalid(root.right);
+	   }
+	   if(current.val<current.left.val)
+	   {
+		    return false;
+	   }
+	   else
+	   {
+		   isvalid(root.right);
+	   }
+	   if(root.left == null&& root.right == null)
+	   {
+		   return  true;
+	   }
+        	return true;
+	   
+   }
+   
+   public  boolean isvalid()
+   {
+	    return isvalid(root);
+   }
+   
+   
+   
+   
+   
+   
+   
+}

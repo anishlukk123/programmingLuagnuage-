@@ -1,0 +1,68 @@
+package javalabs1;
+
+import java.util.*;
+
+public class Lab7_Q2 {
+//driver function
+	public static void main(String args[]) {
+//string
+		String str = "I like queues but queues do not like me";
+//create a array list
+		ArrayList<String> toIgnore = new ArrayList<String>();
+//add string to list
+		toIgnore.add("queues");
+//print most frequent word ignoring the words in the toIgnore list
+		System.out.println(getMostCommonWord(str, toIgnore));
+	}
+
+//Method which returns the most common word ignoring words in toIgnore list
+	public static String getMostCommonWord(String str, List<String> toIgnore) {
+//create an array of words from string str
+		String[] arr = str.split(" ");
+//create hashmap to store frequency
+		HashMap<String, Integer> map = new HashMap<>();
+//for all words in array
+		for (String i : arr) {
+//set ignore word to false used to see if ignoredword is present
+			boolean ignoreword = false;
+//check if this word is present in ignore list
+			for (String s : toIgnore) {
+//if both are equal
+				if (i.equals(s)) {
+//set ignoreword to true
+					ignoreword = true;
+//break from loop
+					break;
+				}
+			}
+//if word found in ignore list
+			if (ignoreword == true) {
+//then continue and skip over the word.
+				continue;
+			}
+//get value of this word from hashmap
+			Integer j = map.get(i);
+//add 1 to it's value using the tenatory operator ?, 
+// which gives 1 if j is equal to one ,otherwise it is j+1 to the value
+			map.put(i, (j == null) ? 1 : j + 1);
+		}
+//to store answer
+		String ans = "";
+//to store frequency of most occuring word
+		int maxfreq = 0;
+//traverse in hashmap
+		for (Map.Entry element : map.entrySet()) {
+//key i.e, word
+			String key = (String) element.getKey();
+//value i.e, it's frequency
+			int freq = (int) element.getValue();
+//if this frequency is greater than found change it. 
+			if (freq > maxfreq) {
+				maxfreq = freq;
+				ans = key;
+			}
+		}
+//return word
+		return ans;
+	}
+}

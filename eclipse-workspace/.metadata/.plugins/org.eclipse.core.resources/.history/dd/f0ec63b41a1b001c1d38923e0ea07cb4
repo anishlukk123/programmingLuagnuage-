@@ -1,0 +1,45 @@
+import java.util.ArrayDeque;
+import java.util.Queue;
+import java.util.Stack;
+
+public class reversequeue {
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Queue<Integer>s = new ArrayDeque<Integer>();
+		s.add(6);
+		s.add((7));
+		s.add(8); 
+		System.out.println(s.toString());
+		Queue<Integer> t = ReverseQueue(s);
+		System.out.println(t.toString());
+		
+		
+	
+}
+		
+	public static  Queue ReverseQueue(Queue<Integer>s)
+	{
+		Stack<Integer>s1 = new Stack<Integer>();
+		if(s.isEmpty())
+			return s;
+		else
+		{
+			while(!s1.isEmpty())
+			{
+				s1.push(s.poll());
+				 s.add(s1.pop());
+			}
+		}
+		
+		
+return s;
+	}
+
+	
+	
+	
+	
+
+}

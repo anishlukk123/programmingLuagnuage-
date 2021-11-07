@@ -1,0 +1,28 @@
+package Queues;
+
+import java.util.Arrays;
+
+public class ArrayQueue {
+	private int items[];
+	int front;
+	int back;
+	int count;
+	
+	public ArrayQueue(int size)
+	{
+		items = new int[size];
+
+	}
+	public void enque(int data)
+	{
+		back++;
+	 items[back] = data;
+	}
+	
+	
+	public String toString()
+	{
+		return  Arrays.toString(items);
+	}
+
+}

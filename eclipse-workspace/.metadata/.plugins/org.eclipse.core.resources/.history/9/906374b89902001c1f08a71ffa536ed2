@@ -1,0 +1,22 @@
+package LinkedList;
+
+
+public class hello {
+	
+	
+public static void main(String[] args) {
+		
+	
+	
+	 var  list= new LinkedList();
+	  list.addlast(3);
+	  list.removefirst();
+	 System.out.println(list.indexof(1));
+	 System.out.println(list.indexof(0));
+	 System.out.println(list.contains(3));
+	 
+	 
+	}
+
+
+}

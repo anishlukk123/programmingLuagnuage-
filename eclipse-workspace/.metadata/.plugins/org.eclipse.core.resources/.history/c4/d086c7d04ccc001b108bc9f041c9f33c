@@ -1,0 +1,33 @@
+package javalabs;
+
+import java.util.Stack;
+
+public class JavaLab1_2 {
+
+	public static void main(String[] args) {
+		String str = "{}{{{{}}";
+		boolean ans = isBalanced(str);
+		System.out.println("Answer " + ans); // Should be False
+
+	}
+
+	public static boolean isBalanced(String str) {
+		Stack<Character> stack = new Stack<Character>();
+		for (int i = 0; i < str.length(); i++) {// Loop to scan each character in string
+			if (str.charAt(i) == '{')// If { is encountered, push it into stack
+				stack.push(str.charAt(i));
+			if (str.charAt(i) == '}')
+
+			{
+				if (stack.isEmpty()) {// stack is empty, then braces are not balanced
+					return false;
+				} else { // non-empty stack, remove the top character from the stack
+					stack.pop();
+
+				}
+			}
+
+		}
+		return stack.isEmpty();
+	}
+}

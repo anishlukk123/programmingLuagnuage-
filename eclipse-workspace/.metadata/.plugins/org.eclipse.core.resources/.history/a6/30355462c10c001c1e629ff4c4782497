@@ -1,0 +1,37 @@
+package twostack;
+public class twostacks {
+	
+	int arr[];
+	int end;
+	int  start;
+	
+	
+	public void twostacks()
+	{
+		int[]arr = new array[40];
+		int end = arr.length-1;
+		
+		int start =-1;
+		
+	}
+	public void push1(int data)
+	{
+		if(start<end-1)
+		{
+			arr[start++] = data;
+		}
+		else
+		{
+			throw new IllegalArgumentException();
+		}
+	}
+	
+	public void push2(int data)
+	{
+		if(end)
+	}
+	
+	
+	
+
+}

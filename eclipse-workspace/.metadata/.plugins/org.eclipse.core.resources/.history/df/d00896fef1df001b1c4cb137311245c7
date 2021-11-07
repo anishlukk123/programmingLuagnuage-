@@ -1,0 +1,68 @@
+package logicprograming;
+
+import java.util.Scanner;
+
+public class Calucaltor {
+	
+
+	public static void main(String[] args) {
+		
+		choice();
+		
+		
+		
+		
+	}
+
+	private static void choice() {
+		// TODO Auto-generated method stub
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter the number for operation");
+		System.out.println("1:multiplication");
+		System.out.println("2:subtration");
+		System.out.println("3:addition");
+		System.out.println("4:divison");
+	
+		int  option = scan.nextInt();
+		
+		while(option != 5)
+	switch(option)
+	{
+	case 1:
+	    System.out.println("enter a number");
+	    double  num1= scan.nextDouble();
+	    System.out.println("enter a number");
+	    double  num2= scan.nextDouble();
+	    double resultnum = num1*num2;
+	    System.out.println(resultnum);
+	    
+	    
+	    break;
+	    
+	case 2:
+		 System.out.println("enter a number");
+		    double  num3= scan.nextDouble();
+		    System.out.println("enter a number");
+		    double  num4= scan.nextDouble();
+		    double resultnum2 = num3-num4;
+		    System.out.println(resultnum2);
+	    break;	
+	    
+	case 3:
+	    System.out.println("Monday");
+	    break;	
+	    
+	case 4:
+	    System.out.println("Monday");
+	    break;	
+	    
+	    
+	    
+		
+	}
+	
+	}
+
+
+}

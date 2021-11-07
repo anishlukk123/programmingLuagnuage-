@@ -1,0 +1,154 @@
+package LinkedList;
+
+import java.util.NoSuchElementException;
+
+public class LinkedList {
+
+	private  class Node
+	{
+		int value;
+		
+		Node next;
+		
+		
+		public Node(int value)
+		{
+			this.value = value;
+		}
+	}
+	
+	
+	private Node head;
+    private Node  tail;
+    private  int count;
+    
+   
+
+	public void addlast(int item) {
+		// TODO Auto-generated method stub
+		
+		
+	var  node = new Node(item);
+			
+			
+			if(head == null)
+			{
+				head= node;
+				tail= node;
+				
+			}
+			else
+			{
+				
+				tail.next = node;
+				tail = node;
+		}
+			 count++;
+
+		
+	}
+	 public void addfirst(int item)
+	 {
+			var  node = new Node(item);
+			
+		 if(head==null)
+		 {
+			 head = tail = node;
+		 }
+		 else
+		 {
+			node.next = head;
+			head = node;
+			
+		 }
+		 count++;
+	 }
+		public  int indexof(int item)
+		{
+			 int index =0;
+			  var  current = head;
+					 while(current!=null)
+					 {
+						 if(current.value !=item) 
+						
+						 {
+							 current = current.next;
+							  index++;
+						 }
+						 else
+						 {
+							 return index;
+						 }
+						
+					 }
+			
+			return -1;
+		
+	 }
+		public boolean contains(int item)
+		{
+			return  indexof(item)!=-1;
+			
+		}
+		
+		public  void  removefirst()
+		{   
+			if(head == tail)
+		{
+			head = tail = null;
+			return;
+		}
+		
+		else if (head != null)
+			{
+          var headnext = head.next;
+          head.next = null;
+           head = headnext;
+			}
+			else
+			{
+				 throw new NoSuchElementException();
+			}
+			
+			count--;
+		}
+		public  void  removelast()
+		{
+			  
+	var previous =  getprevious(tail);
+	tail = previous;
+	tail.next = null;
+	count--;
+	
+	
+
+}
+		public Node getprevious(Node node)
+		{
+			  var  current = head;
+				
+				while(current != null)
+				{
+	          if(current.next==node) 
+	          {
+	        	  return current;
+	          }
+	          else
+	          {
+	        	  current =current.next;
+	          }
+			
+		}
+				return null;
+}
+	
+	 public  int size ()
+	 {
+		return count;
+		 
+	 }
+}
+
+
+
+

@@ -1,0 +1,46 @@
+import java.util.ArrayDeque;
+import java.util.Queue;
+import java.util.Stack;
+
+public class ReverseQueueK {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Queue<Integer> qs = new ArrayDeque<>();
+qs.add(10);
+qs.add(20);
+qs.add(30);
+qs.add(40);
+qs.add(50);
+System.out.print(qs);
+
+		
+	}
+	
+	
+	public static void reverseQueue(int k,Queue<Integer> qs)
+	{
+		int count =0;
+	Stack<Integer> reverser = new Stack<Integer>();
+	while(count!=k)
+	{
+		reverser.push(qs.remove());
+		count++;
+	}
+	while(count!=0)
+	{
+		qs.add(reverser.pop());
+	}
+	
+	
+		
+		
+	}
+
+
+	@Override
+	public String toString() {
+	return "ReverseQueueK []";
+	}
+
+}

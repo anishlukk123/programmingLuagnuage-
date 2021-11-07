@@ -1,0 +1,107 @@
+package FinalExam;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+class Q2 {
+	private int  Max = 100000; 
+	private int arraysize = 100;
+	private List<List<Integer>>  parentlist;
+	
+	Q2()
+	{
+		parentlist = new ArrayList<>(arraysize);
+		
+		for(int i = 0; i<arraysize;i++)
+		{
+			parentlist.add(null);
+		}
+		
+	}
+	
+	public  void add(int key)
+	{
+		 int index = key/arraysize;
+List<Integer> childlist = parentlist.get(index);
+
+if(childlist==null)
+	
+{
+	List<Integer> list = new LinkedList<>();
+	list.add(key);
+	parentlist.set(index, list);
+}
+	
+	else 
+		{
+			if(!childlist.contains(key)) {
+				
+				childlist.add(key);
+			}
+				
+		}
+	}
+	
+	public   String  remove(int key)
+	{
+		 int index = key/arraysize;
+List<Integer> childlist = parentlist.get(index);
+if(childlist!=null)
+{
+	childlist.remove(Integer.valueOf(key));
+	return "Removed";
+	}
+else
+{
+	return "hey no value exist at all";
+}
+
+	}
+	
+	public String contains(int key)
+	{
+		 int index = key/arraysize;
+		 List<Integer> childlist = parentlist.get(index);
+		 
+		 if(childlist !=null && childlist.contains(key)) {
+			 return "true";
+		 }
+		 else
+		 {
+			 return "hey nothing here";
+		 }
+		 
+	}
+		     public static void main(String []args){
+		         Q2 obj=new Q2();
+		            obj.add(5);
+		            obj.add(10);
+		            obj.add(15);
+		            obj.add(20);
+		            //adding elements 5,10,15,20 in to the hashset
+		             System.out.println(obj.contains(5));
+		             //checking whether the hashset contains 5 -> it should return true
+		            System.out.println(obj.contains(11));
+		            //checking whether the hashset contains 11 -> it should return "hey //nothing is here"
+		            System.out.println(obj.remove(5));
+		        //removing 5  from the hashset-> it should return true
+		             System.out.println(obj.remove(11));
+		        ////removing 11  from the hashset-> it should return "hey value does not /////exits at all"   
+		                
+		     }
+		     
+	
+		
+	
+}
+	
+
+	
+	
+	
+
+	
+	
+	
+	

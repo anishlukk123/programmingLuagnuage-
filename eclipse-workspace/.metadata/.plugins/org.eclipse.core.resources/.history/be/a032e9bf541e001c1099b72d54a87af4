@@ -1,0 +1,16 @@
+
+public class runprog {
+
+	public static void main(String[] args) {
+
+		
+	var  Queue =   new QueueLinkList();
+	Queue.enque(0);
+	Queue.enque(0);
+	Queue.enque(0);
+	Queue.enque(0);
+	System.out.print(Queue);
+
+	}
+
+}

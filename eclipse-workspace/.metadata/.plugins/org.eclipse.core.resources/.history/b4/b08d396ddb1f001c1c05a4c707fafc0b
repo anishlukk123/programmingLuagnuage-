@@ -1,0 +1,36 @@
+package hash;
+
+import java.util.HashSet;
+
+public class FirstRepeatedChar {
+
+	public static void main(String[] args) {
+ var front = FirstRepeatedChar("hello");
+ System.out.println(front);
+		
+		
+		
+
+	}
+	
+	
+	public static Character FirstRepeatedChar(String Str)
+	{
+		HashSet<Character>s = new HashSet<>();
+		for(char part: Str.toCharArray())
+		{
+			if(s.contains(part))
+			{
+				return part;
+			}
+			else
+			{
+				s.add(part);
+			}
+		}
+		
+		return null;
+		
+	}
+
+}

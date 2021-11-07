@@ -1,0 +1,82 @@
+package LinkedList;
+
+public class Linkedlist {
+	
+private class Node
+{
+	private  int val;
+	private Node next;
+	
+	public Node(int val)
+	{
+		this.val = val;
+	}
+}
+ Node head;
+ Node tail;
+ int count;
+
+public void addfirst(int data)
+{
+	var node = new Node(data);
+	
+	if(head == null)
+	{
+		head = tail = node;  // setting the head and tail to
+       
+	}
+	else
+	{
+		node.next = head;
+		head = node;
+	}
+	count++;
+}
+public int[] toarray()
+{
+	int items[] = new int[count];
+	Node  current = head;
+	for(int i =0;i<count;i++)
+	{
+		items[i] = current.val;
+	  current = current.next;
+	}
+	return items;
+}
+	public void addlast(int data)
+	{
+		var node = new Node(data);
+		if(head == null)
+		{
+			head = tail = node;
+		}
+		else
+		{
+			tail.next = node;
+			tail = node;
+		}
+		count++;
+	}
+	
+	public void removefirst ()
+	{
+		
+		if(head == null)
+		{
+			return;
+		}
+		else
+		{
+		     
+		    Node nexthead = head.next;
+		    head.next = null;
+		    head = nexthead;
+		     
+		  
+		  
+	}
+
+}
+}
+
+

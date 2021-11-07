@@ -1,0 +1,64 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+
+public  class StackeWithTwoQueus {
+	 Queue<Integer>s;
+	 Queue<Integer>s2 ;
+	int count;
+	
+	
+	public StackeWithTwoQueus()
+	{
+		s = new LinkedList<Integer>();
+		s2 = new LinkedList<Integer>();
+		count =0;
+	}
+	
+	
+	public void  push(int val)
+	{
+		s.add(val);
+		
+		while(!s2.isEmpty())
+		{
+			s.add(s2.remove());
+		}
+		Queue <Integer> temp = s;
+		s = s2;
+		s2 = temp;
+		count++;
+	}
+	
+	
+	public  int Size()
+	{
+		return count;
+	}
+	
+	public int  peek()
+	{
+		return s2.peek();
+	}
+	
+	public boolean isempty()
+	{
+		return count==0;
+	}
+	public  int pop()
+	{
+		return s2.remove();
+		
+	}
+
+
+	@Override
+	public String toString() {
+	return "StackeWithTwoQueus [s=" + s + ", s2=" + s2 + "]";
+	}
+	
+	
+	
+	
+
+}

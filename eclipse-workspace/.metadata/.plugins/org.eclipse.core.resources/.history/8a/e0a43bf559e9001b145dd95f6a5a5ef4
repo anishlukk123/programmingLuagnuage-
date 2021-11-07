@@ -1,0 +1,72 @@
+package popquiz;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+public class PopQuiz {
+
+public static void main(String[] args){
+ 
+
+//	Quiz
+
+
+
+Node head = new Node(1);
+head.next=new Node(2);
+
+head.next.next=new Node(3);
+
+head.next.next.next=new Node(1);
+
+head.next.next.next.next=new Node(2);
+ 
+
+
+//
+
+ 
+
+head = getUnique(head);
+printLinkedList(head);
+ 
+}
+
+public static Node getUnique(Node head){
+	  HashSet<Integer> hs = new HashSet<>();
+	  Node current = head;
+      Node prev = null;
+      while (current != null)
+      {
+          int curval = current.item;
+           
+           // If current value is seen before
+          if (hs.contains(curval)) {
+              prev.next = current.next;
+           
+             
+          } else {
+              hs.add(curval);
+              prev = current;
+           }
+          current = current.next;
+      }
+      return current;
+  }
+	
+
+	
+	
+
+
+
+
+public static void printLinkedList(Node head){
+
+for(Node cur = head;cur!=null;cur=cur.next){
+System.out.print(cur.item+" ");
+
+}
+System.out.println();
+}
+
+}

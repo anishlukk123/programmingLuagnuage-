@@ -1,0 +1,60 @@
+package Arrays;
+
+public class Array {
+	
+	 int[]items;
+	 int count;
+	 
+	 public Array(int length)
+
+	 {
+		 items = new int[length];
+		 count =0;
+	 }
+	 public void insert(int data)
+	 {
+
+		 
+	 items[count] = data;
+		count++;
+		  if(count>=items.length)
+		  {
+			  return;
+		  }
+	 }
+	 
+	 public  void Tostring()
+	 {
+		 for(int i =0;i<items.length;i++)
+		 {
+			 System.out.print(items[i]);
+		 }
+	 }
+	 
+	 public int indexof(int element)
+	 {
+
+ for(int index =0;index<count;index++)
+ {
+	 if(items[index]==element)
+	 {
+		 return index;
+	 }
+ }
+
+		
+ 
+ 
+ return -1;
+	 }
+	 public void removeAt(int index )
+	 {
+		 for(int i =index;i<count;i++)
+		 {
+			 items[i] = items[i+1];
+			 count--;
+		 
+		 }
+		 
+	 }
+}

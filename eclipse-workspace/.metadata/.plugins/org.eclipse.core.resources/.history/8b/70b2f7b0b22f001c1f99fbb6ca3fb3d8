@@ -1,0 +1,42 @@
+package application;
+
+
+import javafx.event.ActionEvent;
+
+import javafx.fxml.FXML;
+
+import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+public class Controller {
+	
+	@FXML
+	private RadioButton sushi,pizza,Indianfood;
+	@FXML
+	private Label label;
+	
+	
+	
+	public void getfood(ActionEvent e)
+	{
+		if(pizza.isSelected())
+		{
+			label.setText(pizza.getText());
+		}
+		else if(sushi.isSelected())
+		{
+			label.setText(sushi.getText());
+		}
+		else if(Indianfood.isSelected())
+		{
+			label.setText(Indianfood.getText());
+		}
+		
+		
+	}
+	
+	
+	
+	
+	
+}
+

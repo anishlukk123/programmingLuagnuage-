@@ -1,0 +1,64 @@
+package application;
+
+
+import java.net.URL;
+
+import java.util.ResourceBundle;
+
+import javafx.animation.FadeTransition;
+import javafx.animation.RotateTransition;
+import javafx.animation.ScaleTransition;
+import javafx.animation.TranslateTransition;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+
+import javafx.scene.shape.Rectangle;
+import javafx.util.Duration;
+
+public class Controller implements  Initializable   {
+	@FXML
+	private Rectangle myrectangle;
+	
+	
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+	/*	
+		TranslateTransition translate = new TranslateTransition();
+		  translate.setNode(myrectangle);
+          translate.setDuration(new Duration(1000));
+          translate.setByX(250); 
+          translate.setByY(-250); 
+          translate.setAutoReverse(true);
+          translate.setCycleCount(4);
+         translate.play();
+         */
+         
+       /*  var rotate = new RotateTransition();
+         rotate.setNode(myrectangle);
+         rotate.setToAngle(360);
+         rotate.autoReverseProperty();
+          rotate.setDuration(new Duration(1000));
+          rotate.setCycleCount(Integer.MAX_VALUE);
+         rotate.play();
+         */
+        /*  var fade =  new FadeTransition();
+          fade.setNode(myrectangle);
+         fade.setFromValue(0);
+         fade.setToValue(1);
+         fade.setCycleCount(3);
+          fade.setDuration(new Duration(10000));
+            fade.play();   */
+		
+		var scale = new ScaleTransition();
+		scale.setNode(myrectangle);
+		scale.setDuration(Duration.millis(1000));
+		scale.setByX(2);
+		scale.setByZ(1);
+		scale.play();
+	}
+}
+	
+	
+
+

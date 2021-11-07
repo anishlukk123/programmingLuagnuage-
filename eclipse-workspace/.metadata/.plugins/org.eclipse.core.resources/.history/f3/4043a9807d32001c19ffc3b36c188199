@@ -1,0 +1,40 @@
+package application;
+
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
+
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.Slider;
+
+public class Controller   {
+	
+	@FXML
+	private Label mylabel;
+	@FXML
+      private   Button  mybutton;
+	@FXML
+	private ProgressBar myprogressbar;
+	
+
+	
+	public void updateprogress(ActionEvent e)
+	{
+		if(myprogressbar.getProgress()<0.999999)
+		{
+			myprogressbar.setProgress(myprogressbar.getProgress()+0.1);
+		 mylabel.setText(String.valueOf(myprogressbar.getProgress()));
+		}
+	
+	}
+
+}
+

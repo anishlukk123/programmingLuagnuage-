@@ -1,0 +1,58 @@
+package hash;
+import java.security.Key;
+import java.util.HashMap;
+import java.util.Set;
+
+public class FirstnonrepeatingChar {
+
+	public static void main(String[] args) {
+	char  front =firstnonrepeatingchsr("aadaaaaa");
+	System.out.print(front);
+
+
+	}
+
+	private static  Character firstnonrepeatingchsr(String  str) {
+		
+		HashMap<Character,Integer> hs = new HashMap<>();
+		
+		for(int i =0;i<str.length();i++)
+		
+		{
+			int freq = 1;
+		    if(hs.containsKey(str.charAt(i)))
+		    {
+		    	hs.put(str.charAt(i),freq+1);
+		    }
+		    else
+		    {
+		    	hs.put(str.charAt(i),1);
+		    }
+		    System.out.println(hs);
+		 
+		}
+		for(int i =str.length()-1;i>=0;i--)
+		{
+			if(hs.get(str.charAt(i))==1)
+					{
+				 return  str.charAt(i);
+					}
+			else
+			{
+				continue;
+			}
+			
+		}
+		return 'L';
+		
+		}
+		
+		
+		
+		
+		
+	}
+	
+	
+
+

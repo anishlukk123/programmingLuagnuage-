@@ -1,0 +1,57 @@
+package designstack;
+
+import java.util.LinkedList;
+
+public class stackdesign {
+	
+    LinkedList<Integer>stack = new LinkedList<Integer>();
+    int min;
+	
+
+	public void  push(int data)
+	{
+		if(stack.isEmpty())
+			{
+			stack.addFirst(data);
+			min = data;
+		}
+		else
+		{
+			stack.addFirst(data);
+			if(data<min)
+			{
+				min = data;
+			}
+		}
+		
+	}
+	public int pop()
+	{
+		int  popvalue = stack.removeFirst();
+		
+		if(popvalue==min)
+		{
+		  
+		}
+		
+		return popvalue;
+		
+	}
+	public Object[] toarray()
+	{
+       return stack.toArray();
+	
+		
+	}
+	public int getmin()
+	{
+
+		return min;
+		
+		
+		
+	}
+		
+	}
+
+

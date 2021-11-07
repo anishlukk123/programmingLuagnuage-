@@ -1,0 +1,43 @@
+package arrays;
+
+public class arrays {
+
+	int num[];
+	private int count;
+
+	arrays(int length) {
+		num = new int[length];
+	}
+
+	public void print() {
+		for (int i = 0; i < count; i++) {
+			System.out.println(num[i] + "");
+		}
+	}
+
+	public void insert(int item) {
+		if (num.length == count) {
+			System.out.println("the array is full");
+		} else {
+			num[count] = item;
+			count++;
+
+		}
+	}
+	
+	public void remove(int index)
+	{
+		if( index < 0|| index>count)
+		{
+			System.out.println("this is not a valid index");
+		}
+		else
+		{
+			for(int i = index; i<count;i++) {
+			num[i] = num[i+1];
+			count--;
+		}
+			
+	}
+}
+}

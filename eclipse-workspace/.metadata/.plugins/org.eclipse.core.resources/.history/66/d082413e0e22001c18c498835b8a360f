@@ -1,0 +1,16 @@
+package hash;
+
+public class implement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		var HMI =  new HashMapImplement();
+		HMI.put(0, "hello");
+		HMI.put(0,"hello");
+		System.out.print(HMI);
+		
+
+	}
+
+}

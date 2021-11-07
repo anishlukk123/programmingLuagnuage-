@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;NewJavaFxProject&apos; to &apos;MusicPlayer&apos;" description="Rename resource &apos;NewJavaFxProject&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/NewJavaFxProject" name="MusicPlayer" stamp="1636289658940" updateReferences="true"/>
+</session>

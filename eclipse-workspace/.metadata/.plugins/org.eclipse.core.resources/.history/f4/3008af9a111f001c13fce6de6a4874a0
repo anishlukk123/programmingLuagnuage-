@@ -1,0 +1,32 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+
+public  class StackeWithTwoQueus {
+private  Queue<Integer>s;
+private  Queue<Integer>s2;
+StackeWithTwoQueus()
+{
+	s = new LinkedList<Integer>();
+	s2 = new LinkedList<Integer>();
+	
+}
+
+public void push(int val)
+{
+	if(s.isEmpty())
+	{
+		s.add(val);
+		
+	}
+	else
+	{
+		s2.add(val);
+	}
+}
+
+
+	
+	
+
+}

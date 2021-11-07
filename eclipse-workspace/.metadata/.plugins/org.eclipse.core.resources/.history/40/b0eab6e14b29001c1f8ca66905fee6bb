@@ -1,0 +1,17 @@
+package hash;
+
+public class runner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+	 var  hash = new HashMap();
+	 
+	 hash.put(0, 0);
+	 System.out.print(hash);
+	 
+
+	}
+
+}

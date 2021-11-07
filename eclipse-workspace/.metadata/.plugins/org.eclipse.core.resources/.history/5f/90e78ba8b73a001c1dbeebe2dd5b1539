@@ -1,0 +1,47 @@
+
+public class Avltree {
+	
+	
+	private class avlnode{
+		
+		private  int value;
+		 avlnode left;
+		 avlnode right;
+		
+		 
+		 
+		 public avlnode(int value)
+		 {
+			  this.value = value;
+			  left = null;
+			  right =null;
+		 }
+	}
+	
+	
+ avlnode root;
+ 
+ private   avlnode  insert(avlnode root,int val) {
+
+	 if(root == null)
+	 {
+		  return new avlnode(val);
+	 }
+	 else if(val<root.value)
+	 {
+		root.left = insert(root.left,val);
+	 }
+	 else if(val>root.value)
+	 {
+		 root.right =insert(root.right,val);
+	 }
+	return root;
+
+	 
+ }
+ public   void insert(int val) {
+	 insert( root, val);
+
+
+}
+}

@@ -1,0 +1,43 @@
+import java.util.Stack;
+
+public class ImplementQueueStack {
+	  private static Stack<Integer>s1 ;
+      private static  Stack<Integer>s2;
+	
+	public ImplementQueueStack()  // Q {0,1,2,3,4}
+	                              // s1 {4,3,2,1,0}
+	                               // s2[0,1,2,3,4,}
+	                                     
+	{
+		s1 = new Stack<Integer>();
+		s2 = new Stack<Integer>();
+		
+	}
+	
+	public static void enque(int val)
+	{
+		s1.push(val);
+	}
+	public static int deque()
+	 
+	{
+		if(isempty())
+		{
+			return -1;
+		}
+		
+		if(s2.isEmpty())
+		{
+		while(!s1.isEmpty())
+		s2.push(s1.pop()); 
+	}
+		return s2.pop();
+		
+	}
+  public static  boolean isempty()
+  {
+	  return s1.isEmpty() && s2.isEmpty();
+  }
+	
+
+}

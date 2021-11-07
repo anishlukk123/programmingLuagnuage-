@@ -1,0 +1,14 @@
+
+public class run {
+
+	public static void main(String[] args) {
+		
+		var  Queue = new ImplementQueueStack();
+		Queue.enque(0);
+		 var front = Queue.deque();
+		 System.out.print(front);
+		
+
+	}
+
+}

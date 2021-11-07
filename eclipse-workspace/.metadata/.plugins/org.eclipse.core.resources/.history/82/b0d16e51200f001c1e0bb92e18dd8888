@@ -1,0 +1,32 @@
+package Queues;
+
+import java.util.Arrays;
+
+public class runner {
+	
+	
+public static void main(String[] args) {
+
+	ArrayQueue queue = new ArrayQueue(5);
+	queue.enque(5);
+	queue.enque(1);
+	queue.enque(6);
+	queue.enque(2);
+	queue.enque(3);
+	String result=queue.toString();
+	System.out.println(result);
+	System.out.println(queue.isfull());
+	System.out.println(queue.peek());
+	System.out.println(queue.deque());
+	
+
+
+	
+		
+		
+
+		 
+		 
+		}
+
+}

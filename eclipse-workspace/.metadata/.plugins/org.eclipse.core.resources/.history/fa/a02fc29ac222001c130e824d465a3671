@@ -1,0 +1,49 @@
+package hash;
+
+import java.util.HashMap;
+
+public class mostfrequentnumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		int[]nums = {1,2,2,3,3,3,4};
+		var frequent  = mostfrequentnumber(nums);
+		System.out.println(frequent);
+
+	}
+
+	private static  int mostfrequentnumber(int[] nums) {
+		// TODO Auto-generated method stub
+	     HashMap<Integer,Integer> hs = new HashMap<>();
+	     int maxfreq =0;
+	     for(int i =0;i<nums.length;i++)
+	     {
+	    	 int freq =1;
+	    	 if(hs.containsKey(nums[i]))
+	    	 {
+	    		 freq++;
+	    		 hs.replace(nums[i],freq);
+	    		 if(maxfreq<freq) {
+	    			 maxfreq = freq;
+	    		 }
+	    	 }
+	    	 else
+	    	 {
+	    		 hs.put(nums[i], freq);  // 1 2 3
+	    		 
+	    		 if(maxfreq<=freq) {
+	    			 maxfreq = freq; //  2
+	    		 }
+	    	 }
+	     }
+	     
+	     
+	     
+	     
+	     
+	     return  hs.get(maxfreq);
+	}
+
+}

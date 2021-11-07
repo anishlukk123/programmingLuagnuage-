@@ -1,0 +1,19 @@
+package LinkedList;
+
+
+public class hello {
+	
+	
+public static void main(String[] args) {
+		
+	
+	
+	 var  list= new LinkedList();
+	  list.removefirst();
+
+	 
+	 
+	}
+
+
+}

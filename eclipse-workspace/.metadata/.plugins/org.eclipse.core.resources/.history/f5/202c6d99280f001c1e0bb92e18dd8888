@@ -1,0 +1,18 @@
+package ringbuffer;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		var ringbuffer = new ringbuffer();
+		ringbuffer.add(1);
+		ringbuffer.add(2);
+		ringbuffer.add(3);
+		ringbuffer.add(4);
+		ringbuffer.add(5);
+		rinbuffer.add(6);
+		System.out.print(ringbuffer.print());
+
+}
+}

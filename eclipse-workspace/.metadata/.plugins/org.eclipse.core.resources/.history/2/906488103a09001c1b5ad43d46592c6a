@@ -1,0 +1,28 @@
+package LinkedList;
+
+import java.util.Arrays;
+
+public class hello {
+	
+	
+public static void main(String[] args) {
+		
+	
+	
+	 var  list= new LinkedList();
+	list.addfirst(3);
+	 list.addlast(0);
+       list.addlast(1);
+       list.middle();
+
+	 
+       System.out.println(Arrays.toString(list.toArray()));
+       System.out.println( list.returnkfromend(2));
+
+       System.out.println(Arrays.toString(list.middle()));
+
+	 
+	 
+	}
+
+}

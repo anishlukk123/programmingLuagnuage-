@@ -1,0 +1,32 @@
+package logicprograming;
+
+import java.util.Scanner;
+
+public class MultiplicationTable {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		mulritable();
+
+	}
+
+	private static void mulritable() {
+		// TODO Auto-generated method stub
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("enter  the number");
+		int  num = scan.nextInt();
+		
+		for(int i =0; i < 15; i++)
+		{
+			int multiresult = num * i; 
+			System.out.println(multiresult);
+		}
+		
+		
+	
+	}
+
+}

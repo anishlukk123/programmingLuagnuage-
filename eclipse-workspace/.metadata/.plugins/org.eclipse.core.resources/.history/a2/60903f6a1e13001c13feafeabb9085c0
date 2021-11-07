@@ -1,0 +1,42 @@
+import java.util.Stack;
+
+public class BalancedExpressions {
+
+	public static void main(String[] args) {
+
+		String str = "{{{}}}";
+		balancedexpressions(str);
+
+	}
+
+	private static boolean balancedexpressions(String str) {
+		Stack<Character> stack = new Stack<>();
+		for(int i =0;i<str.length();i++)
+		{
+			if(str.charAt(i) == '{')
+			{
+				stack.push('{');
+			}
+			else
+			{
+				if(str.charAt(i) == '}'&&stack.isEmpty())
+				{
+					return false;
+				}
+				else
+				{
+					stack.pop();
+				}
+				
+			}
+					
+		}
+		return stack.isEmpty();
+		
+		
+		
+		return false;
+		
+	}
+
+}

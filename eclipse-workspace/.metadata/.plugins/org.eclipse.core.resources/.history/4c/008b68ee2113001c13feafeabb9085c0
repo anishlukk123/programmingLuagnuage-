@@ -1,0 +1,13 @@
+
+public class runner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		stackbyarray stack = new stackbyarray();
+		stack.push(10);
+		stack.push(0);
+		stack.pop();
+		System.out.print(stack.peek());
+	}
+
+}

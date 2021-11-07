@@ -1,0 +1,21 @@
+package LinkedList;
+
+import java.util.Arrays;
+
+public class hello {
+	
+	
+public static void main(String[] args) {
+		
+	
+	
+	 var  list= new LinkedList();
+	 list.addfirst(3);	
+       System.out.println(Arrays.toString(list.toArray()));
+
+	 
+	 
+	}
+
+
+}

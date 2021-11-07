@@ -1,0 +1,61 @@
+package logicprograming;
+
+import java.util.Scanner;
+
+public class gradecalctor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+calcgrade();
+
+	}
+
+	private static void calcgrade() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter the   grade for subject 1 ");
+	 double sub1grade = scan.nextDouble();
+	 System.out.println("enter the   grade for subject 2 ");
+	 double sub2grade = scan.nextDouble();
+	 System.out.println("enter the   grade for subject 2 ");
+	 double sub3grade = scan.nextDouble();
+	 
+	 
+	 while(sub1grade>=0 &&sub2grade>=0 && sub3grade>=0)
+	 {
+		double avg = sub1grade +sub2grade +sub3grade/3;
+		
+		if(avg >= 85)
+		{
+			 System.out.println("you have earned an a ");
+			 
+			 break;
+		}
+		
+		else if (avg>= 75 && avg<85)
+		{
+			System.out.println("you have earned an B ");
+			break;
+		}
+		
+		else if (avg< 75 && avg>=50)
+		{
+			System.out.println("you have earned an C ");
+			break;
+		}
+		
+		else if (avg< 50 && avg>=30)
+		{
+			System.out.println("you have earned an D ");
+			break;
+		}
+		else if (avg<=30)
+		{
+			System.out.println("you have failed ");
+			break;
+		}
+		
+	 }
+		
+	}
+
+}

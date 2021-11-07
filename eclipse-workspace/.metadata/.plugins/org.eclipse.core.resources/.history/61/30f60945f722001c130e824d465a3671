@@ -1,0 +1,52 @@
+package hash;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+
+
+public class uniquepairs {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[]nums = {1,7,5,12,9,3};  //(1,3) ( 7,5) (9,7) (5,3)
+		var pairs = pairs(nums,2);
+		System.out.print(pairs);
+
+	}
+
+	private static int  pairs(int[] nums,int k) {
+	HashMap<Integer,Integer>hs = new HashMap<Integer,Integer>();
+	 int pairs =0;
+	for(int i =0;i<nums.length;i++)
+	{
+		hs.put(nums[i],nums[i]-k);    // 1,7,5,12,9.3
+	}                                 // N 5 3 N 7 1
+	
+	for(int i =0;i<nums.length;i++)
+	{
+		int count =0;
+		int compliment = nums[i]-k;  //-1
+		System.out.println(compliment);
+
+		if (hs.containsKey(compliment)); // -1 no count =0;
+		                                 // 5  yes count =1;
+		                                 //  3  yes count = 2
+		                                 // 12 
+		
+		{
+			count++;
+			pairs =count;
+		}
+		
+	}
+	
+	return  pairs;
+	}
+		
+		
+	}
+
+
+

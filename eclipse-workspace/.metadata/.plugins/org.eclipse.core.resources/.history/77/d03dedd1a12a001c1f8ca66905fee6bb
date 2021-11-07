@@ -1,0 +1,14 @@
+
+public class runner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		var  tree =   new poupulatebinarysearchtree();
+		tree.insert(0);
+System.out.println(tree.find(0));
+	}
+
+}

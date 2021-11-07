@@ -1,0 +1,93 @@
+package FinalExam;
+ // assuming that there  is no  constraints on  values. 
+// assuming we are working with integers
+// assuming that we 
+// the time and space complexity   depends on the intail capicty and the load facotr of the each 100 elemtns. 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+class Q2 {
+	private int arraysize = 100;
+	private List<List<Integer>> parentlist;
+	
+
+	Q2() {
+		parentlist = new ArrayList<>(arraysize);  //  the whole thing  whith each indivual element holding null 
+
+		for (int i = 0; i < arraysize; i++) {
+			parentlist.add(null);
+		}
+
+	}
+// adding key to the hashset; 
+	public void add(int key) {
+		int index = key / arraysize; // hashcode
+		List<Integer> childlist = parentlist.get(index);//  inside each parentlist there is a childlist with valuesat the hexcode value.  
+
+		if (childlist == null)  //  checking if childlist is "empty" 
+
+		{
+			List<Integer> list = new LinkedList<>();  // if it is empty then add  the key ,
+// and replace the existing position of parentlist with the nnew one  at index  with the list list; 
+			list.add(key);// adding the list 
+			parentlist.set(index, list);
+		}
+
+		else {
+			if (!childlist.contains(key)) {         // if  the childlist is not empty then check if the key is the child list, 
+				// if it is dont add , but if it  is not then  add it  to the childlist;
+
+				childlist.add(key);
+			}
+
+		}
+	}
+//  remove a key from the hasset 
+	public String remove(int key) {
+		int index = key / arraysize;  // hashcode
+		List<Integer> childlist = parentlist.get(index); // place where his hascode is 
+		if (childlist != null&&childlist.contains(key)) { // if chldlist is not null or the childlist does not exist at all  
+			//then delte value of key in the child list and return "removed"
+			childlist.remove(Integer.valueOf(key));
+			return "Removed";
+		} else { // else  return  "hey no value existed at all;
+			return "hey no value exist at all";
+		}
+
+	}
+// see if a  key is in the hashset
+	public String contains(int key) {
+		int index = key / arraysize;  // hashcode 
+		List<Integer> childlist = parentlist.get(index);   // place where his hascode is 
+
+		if (childlist != null && childlist.contains(key)) { 
+			// checking if the  childist contains key, and  is not null,
+			return "true";  // if it is true then  return " true"
+		} else {
+			return "hey nothing here"; // otherwise return "hey nothing here"
+		}
+
+	}
+
+	public static void main(String[] args) {
+		Q2 obj = new Q2();
+		obj.add(5);
+		obj.add(10);
+		obj.add(15);  // adding  to the hashset
+		obj.add(20);
+		// adding elements 5,10,15,20 in to the hashset
+		System.out.println(obj.contains(5));
+		// checking whether the hashset contains 5 -> it should return true
+		System.out.println(obj.contains(11));
+		// checking whether the hashset contains 11 -> it should return "hey //nothing
+		//  here"
+		System.out.println(obj.remove(5));
+		// removing 5 from the hashset-> it should return removed 
+		System.out.println(obj.remove(11));
+		//// removing 11 from the hashset-> it should return "hey value does not
+		//// /////exits at all"
+
+	}
+
+}

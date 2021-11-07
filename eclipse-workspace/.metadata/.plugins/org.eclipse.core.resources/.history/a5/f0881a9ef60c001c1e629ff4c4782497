@@ -1,0 +1,30 @@
+package designstack;
+
+import java.util.Arrays;
+
+public class runner {
+	
+	
+public static void main(String[] args) {
+
+		
+		
+		
+		var  list= new stackdesign();
+		list.push(5);
+		list.push(2);
+		list.push(3);
+		list.pop();
+		list.pop();
+		System.out.println(Arrays.toString(list.toarray()));
+		System.out.println(	list.getmin());
+	
+		
+
+		 
+		 
+		}
+	
+
+
+}

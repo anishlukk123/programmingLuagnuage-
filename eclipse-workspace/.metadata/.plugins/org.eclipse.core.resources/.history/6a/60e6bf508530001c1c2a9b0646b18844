@@ -1,0 +1,24 @@
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		  var tree =  new BinarySearchtree();
+		  tree.inset(7);
+		  tree.inset(4);
+		  tree.inset(9);
+		  tree.inset(1);
+		  tree.inset(6);
+		  tree.inset(8);
+		  tree.inset(10);
+		 System.out.print(tree.find(10));
+		  tree.preordertraversal();
+		  System.out.println();
+		  tree.inordertraversal();
+		  
+		 
+	}
+
+}

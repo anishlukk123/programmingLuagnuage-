@@ -1,0 +1,43 @@
+import java.util.LinkedList;
+
+public class QueueLinkList {
+LinkedList<Integer>Queue;
+
+public QueueLinkList()
+{
+	Queue = new LinkedList<Integer>();
+}
+
+public boolean isempty()
+
+{
+	
+	return Queue.isEmpty();
+	
+}
+public int size()
+{
+	return Queue.size();
+}
+
+public int  peek()
+{
+	return Queue.get(0);
+}
+
+public  void enque(int val)
+{
+	Queue.addLast(val);
+}
+
+public void deque()
+{
+	Queue.removeFirst();
+}
+
+@Override
+public String toString() {
+	return "[" + Queue + "]";
+}
+
+}

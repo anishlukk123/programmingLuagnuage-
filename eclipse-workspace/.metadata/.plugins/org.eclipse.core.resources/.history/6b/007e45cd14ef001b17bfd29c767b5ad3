@@ -1,0 +1,99 @@
+package FinalExam;
+class  ListNode{
+    
+    int key;
+    ListNode next;
+    
+    ListNode() {
+        
+    }
+    ListNode(int key) {
+        this.key = key;
+    }
+}
+class Q2 {
+
+    ListNode[] hashTable;
+    int k;
+    
+    /** Initialize your data structure here. */
+    public Q2() {
+        k = 10000;
+        hashTable = new ListNode[k];
+    }
+    
+    public void add(int key) {
+        
+        int hashKey = key % k;
+        ListNode newNode = new ListNode(key);
+        
+        ListNode hashNode = hashTable[hashKey];
+        if(hashNode == null) {
+            hashTable[hashKey] = newNode;
+        }
+        else {
+            ListNode currentNode, lastNode;
+            currentNode = lastNode = hashNode;
+            
+            while(currentNode != null) {
+                if(currentNode.key == key) {
+                    return;
+                }
+                lastNode = currentNode;
+                currentNode = currentNode.next;
+            }
+            lastNode.next = newNode;
+        }
+    }
+    
+    public void remove(int key) {
+        
+        int hashKey = key % k;
+        
+        ListNode hashNode = hashTable[hashKey];
+        if(hashNode == null) {
+            return;
+        }
+        else {
+            ListNode currentNode, lastNode;
+            currentNode = lastNode = hashNode;
+            
+            while(currentNode != null) {
+                if(currentNode.key == key) {
+                    break;
+                }
+                lastNode = currentNode;
+                currentNode = currentNode.next;
+            }
+            if(currentNode == hashNode) {
+                hashTable[hashKey] = currentNode.next;
+            }
+            else if(currentNode != null) { //current node null means key is NOT present
+                lastNode.next = currentNode.next;
+            }
+        }
+    }
+    
+    /** Returns true if this set contains the specified element */
+    public boolean contains(int key) {
+        
+        int hashKey = key % k;
+        
+        ListNode hashNode = hashTable[hashKey];
+        if(hashNode == null) {
+            return false;
+        }
+        else {
+            ListNode currentNode;
+            currentNode = hashNode;
+            
+            while(currentNode != null) {
+                if(currentNode.key == key) {
+                    return true;
+                }
+                currentNode = currentNode.next;
+            }
+            return false;
+        }
+    }
+}

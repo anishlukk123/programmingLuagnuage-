@@ -1,0 +1,15 @@
+package twostack;
+
+import java.util.Arrays;
+
+public class hello {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+ twostacks twostack = new  twostacks();
+ twostack.push1(5);
+
+		
+	}
+
+}

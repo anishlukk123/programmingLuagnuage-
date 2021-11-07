@@ -1,0 +1,63 @@
+
+
+public class BinarySearchtree {
+	
+	private class node
+	{
+		private node right;
+		private node left;
+		private  int val;
+		
+		public node(int value)
+		{
+			val= value;
+		}
+		
+	}
+	
+  node root;
+  
+  public void inset(int val)
+  {
+	  var current = root;
+	  var node = new node(val);
+	   if(current == null)
+	   {
+		   root = node;
+	   }
+	   else
+	   {
+		 while(current!=null)
+		 { 
+			 if(node.val>current.val)
+			 {
+				 if(current.right==null)
+				 {
+					 current.right = node;
+					 break;
+				 }
+				 else
+				 {
+					  current =  current.right;
+				 }
+			 }
+			 else  if(node.val<current.val)
+			 {
+				 if(current.left==null)
+				 {
+					 current.right = node;
+					 break;
+				 }
+				 else
+				 {
+					  current =  current.right;
+				 }
+				 
+			 }
+		 }
+			 
+		 }
+	
+	
+
+}

@@ -1,0 +1,27 @@
+package FinalExam;
+
+import java.util.ArrayList;
+
+class MyHashSet {
+
+	   /** Initialize your data structure here. */
+	ArrayList<Integer> s;
+	public MyHashSet() {
+	    s=new ArrayList<>();
+	}
+
+	public void add(int key) {
+	    if(s.contains(key)==false)
+	        s.add(key);
+	}
+
+	public void remove(int key) {
+	  if(s.contains(key)==true)
+	      s.remove(s.indexOf(key));
+	}
+
+	/** Returns true if this set contains the specified element */
+	public boolean contains(int key) {
+	    return s.contains(key);
+	}
+	}

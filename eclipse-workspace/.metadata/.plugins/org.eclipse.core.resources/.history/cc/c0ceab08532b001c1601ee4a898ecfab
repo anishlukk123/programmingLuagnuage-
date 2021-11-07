@@ -1,0 +1,13 @@
+
+public class main1 {
+
+	public static void main(String[] args) {
+
+		var tree = new Bst();
+		tree.insert(5);
+		System.out.print(tree.root);
+		
+		System.out.print(tree.find(5));
+		
+	}
+}

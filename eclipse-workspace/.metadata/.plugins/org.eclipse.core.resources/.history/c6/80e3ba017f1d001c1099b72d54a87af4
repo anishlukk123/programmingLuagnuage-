@@ -1,0 +1,24 @@
+import java.util.Arrays;
+
+public class runner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		QueuesArray arr = new 	QueuesArray (6);
+		arr.enque(0);
+		arr.enque(1);
+		arr.enque(2);
+		arr.enque(3);
+		arr.enque(4);
+		arr.enque(5);
+		
+System.out.println(arr.QueueString());
+System.out.println(arr.deque());  
+System.out.println(arr.deque());
+System.out.println(arr.deque());
+
+System.out.println(arr.QueueString());
+
+}
+}

@@ -1,0 +1,32 @@
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		  var tree =  new BinarySearchtree();
+		  tree.inset(7);
+		  tree.inset(4);
+		  tree.inset(9);
+		  tree.inset(1);
+		  tree.inset(6);
+		  tree.inset(8);
+		  tree.inset(10);
+		  var tree1 =  new BinarySearchtree();
+		  tree1.inset(7);
+		  tree1.inset(4);
+		  tree1.inset(9);
+		  tree1.inset(1);
+		  tree1.inset(6);
+		  tree1.inset(8);
+		  tree1.inset(10);
+		 System.out.print(tree.equals(tree1)); 
+		 System.out.print(tree.isvalid()); 
+		 
+		 
+		  
+		 
+	}
+
+}

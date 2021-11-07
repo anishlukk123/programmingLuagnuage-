@@ -1,0 +1,29 @@
+package application;
+
+import javafx.event.ActionEvent;
+
+public class Controller {
+
+	public void  up(ActionEvent e)
+	{
+	 System.out.println(" you presed up");
+	}
+	public void  down(ActionEvent e)
+	{
+	 System.out.println(" you presed down");
+	}
+	
+	public  void  right(ActionEvent e)
+	{
+		System.out.println(" you presed right");
+	}
+	
+	public  void   left(ActionEvent e)
+	{
+		System.out.println(" you presed left");
+	}
+	
+	
+	
+
+}

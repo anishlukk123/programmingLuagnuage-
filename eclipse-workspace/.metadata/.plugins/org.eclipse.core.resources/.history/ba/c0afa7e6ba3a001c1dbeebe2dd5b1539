@@ -1,0 +1,67 @@
+
+
+public class Avltree {
+	
+	
+	private class avlnode{
+		
+		private  int value;
+		 avlnode left;
+		 avlnode right;
+		 private int height;
+		
+		 
+		 
+		 public avlnode(int value)
+		 {
+			 
+              height =0;
+			  this.value = value;
+			  left = null;
+			  right =null;
+		 }
+	}
+	
+	
+ avlnode root;
+ 
+ private   avlnode  insert(avlnode root,int val) {
+
+	 if(root == null)
+	 {
+		  return new avlnode(val);
+	 }
+	 if(val<root.value)
+	 {
+		root.left = insert(root.left,val);
+	 }
+	 else 
+	 {
+		 root.right =insert(root.right,val);
+	 }
+	 
+	 root.height = Math.max(height(root.left),height(root.right))+1;
+	return root;
+
+	 
+ }
+ public   void insert(int val) {
+	 insert( root, val);
+}
+ 
+private int height(avlnode root )
+{
+	if(root ==null)
+	{
+		return -1;	
+	}
+	return root.height;
+	
+}
+public  int height()
+{
+	
+	return height(root);
+}
+ 
+}

@@ -1,0 +1,32 @@
+package application;
+
+
+import java.net.URL;
+
+
+import javafx.event.ActionEvent;
+
+import javafx.fxml.FXML;
+
+import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
+
+public class Controller    {
+	
+	@FXML
+	private Label mylabel;
+	@FXML
+      private  Slider slider;
+	
+	public void getemp(ActionEvent e )
+	{
+		   double temp = slider.getValue();
+		 mylabel.setText(String.valueOf(temp));
+		
+	}
+	
+	
+	
+
+}
+

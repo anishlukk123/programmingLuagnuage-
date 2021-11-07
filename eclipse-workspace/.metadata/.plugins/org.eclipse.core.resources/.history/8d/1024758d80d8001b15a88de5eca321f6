@@ -1,0 +1,66 @@
+package javalabs1;
+public class Lab3Q1{
+public static void main(String[] args){
+
+Node head = new Node(2017);
+Node second = new Node(2012);   // adding elements here 
+Node third = new Node(2007);
+Node fourth = new Node(4520);
+
+head.next = second;
+second.next = third;
+
+System.out.println("List Before Deletion"); 
+
+printLinkedList(head); // Should be 1 2 3
+
+ System.out.println("List After Deletion at index 2");
+ deleteAtIndex(2, head);
+printLinkedList(head);	// Should be 1 2  
+
+ System.out.println("List After Deletion at index 1");
+ deleteAtIndex(1, head);
+
+printLinkedList(head);	// Should be 1
+
+
+}
+
+/**
+ * This method is used to delete an node at a positon.
+ * @param  value this is the first paramter to  deleteAtIndex method to repersent the index
+ * @param  Node Head is the head of  the linked list assuming user will never delete the head. 
+ */ 
+public static void deleteAtIndex(int value, Node head) {
+     
+   {
+	    Node prev,curr;
+	    int count=1;
+	    curr=head.next;  
+	    prev=head;      
+	    while(curr!=null) {
+      if(count==value)        
+	      { 
+	         prev.next=curr.next; // deleting the value 
+	         break;               
+	      }
+	      curr=curr.next;         
+	      prev=prev.next;          
+	      count++;           // incrementing the count   
+	    }
+   }
+	}
+/**
+ * This method is used to print out the Linked list  after deletion 
+ * @param  Node Head is the head of  the linked list assuming user will never delete the head. 
+ */
+public static void printLinkedList(Node head){    // printing out the linked list. 
+	for(Node cur = head;cur!=null;cur=cur.next)
+	
+	{ System.out.print(cur.item+" ");
+
+}
+
+System.out.println();
+}
+}

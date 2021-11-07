@@ -1,0 +1,38 @@
+import java.util.Arrays;
+
+public class QueuesArray {
+	
+	private int back;
+	private int[] Queue;
+	private int count;
+	private int front;
+
+ 
+public QueuesArray(int length)
+{
+Queue = new int[length];
+count =0;
+front =0;
+back = count;
+}
+
+public void enque(int val)
+{
+	Queue[back++] = val;
+	count++;
+	
+}
+
+public  String  QueueString()
+{
+	
+	
+	return Arrays.toString(Queue);
+	
+}
+
+
+}
+
+
+// {1,2,3,4,5

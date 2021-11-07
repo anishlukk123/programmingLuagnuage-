@@ -1,0 +1,20 @@
+package LinkedList;
+
+
+public class hello {
+	
+	
+public static void main(String[] args) {
+		
+	
+	
+	 var  list= new LinkedList();
+	 list.addlast(3);
+	 list.addlast(2);
+	 list.addlast(1);
+	 list.addlast(5);
+	 System.out.println(list.indexof(1));
+	}
+
+
+}

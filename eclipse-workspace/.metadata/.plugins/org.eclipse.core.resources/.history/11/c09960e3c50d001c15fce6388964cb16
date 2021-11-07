@@ -1,0 +1,65 @@
+package designstack;
+
+import java.util.Stack;
+
+public class stackdesign {
+	
+	Stack<Integer>stack = new Stack<Integer>();
+	int min;
+	
+public void push(int data)
+{
+	
+	 if(stack.empty())
+	 {
+		 stack.push(data);
+		 min = data;
+	 }
+	 else
+	 {
+		 if(data<min)
+		 {
+			 stack.push(2*data -min);
+			 min = data;
+		 }
+		 if(data>min)
+		 {
+			 stack.push(data);
+		 }
+	 }
+
+}
+public int getmin()
+{
+	
+	
+	
+	return min;
+	
+}
+public int pop()
+{
+	 if(stack.empty())
+	 {
+ return -1;
+	 }
+	 else
+	 {
+		 int poppedvalue = stack.pop();
+		 if(poppedvalue<=min)
+		 {
+		  min = 2*min -poppedvalue;
+		  System.out.println("this is the"+min);
+		  return poppedvalue;
+		 }
+	 }
+	return -1;
+	
+	 
+}
+
+}
+		
+	
+
+

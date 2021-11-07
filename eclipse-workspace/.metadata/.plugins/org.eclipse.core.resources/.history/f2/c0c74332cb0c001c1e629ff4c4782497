@@ -1,0 +1,96 @@
+package twostack;
+public class twostacks {
+	
+	private int arr[];
+	private int end ;
+	private int  start;
+	int size;
+	
+	
+	public twostacks(int n)
+	{
+	 size = n;
+	 arr = new int[n];
+	 end = n;
+	 start =-1;
+		
+	}
+	public void push1(int data)
+	{
+		if(start<end-1)
+		{
+			start++;
+			arr[start] = data;
+		}
+		else
+		{
+			throw new IllegalArgumentException();
+		}
+	}
+	
+	public void push2(int data)
+	{
+		if(start<end-1)
+		{
+			arr[end--] = data;
+		}
+		else 
+		{
+			throw new IllegalArgumentException();
+		}
+		
+	}
+	
+	public int   pop1()
+	{
+	if(start>=0)
+	{
+		int x = arr[start];
+		start++;
+		return x;
+	}
+	else
+	{
+		return -1;
+	}
+}
+	public int   pop2()
+	{
+	if(end<size)
+	{
+		int x = arr[end];
+		end--;
+		return x;
+	}
+	else
+	{
+		return size+1;
+	}
+	}
+	
+	public boolean isempty1()
+	{
+	return start==1;	
+	}
+	public boolean isempty2()
+	{
+	return end==size;	
+	}
+	public boolean isfull1()
+	{
+	return  start +1 >= end  ;
+	}
+	public boolean isfull2()
+	{
+	return  end -1 == start;
+	}
+	
+	
+	
+	
+	
+	
+	
+}
+	
+

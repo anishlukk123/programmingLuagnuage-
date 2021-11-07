@@ -1,0 +1,48 @@
+package FinalExam;
+
+import java.util.Arrays;
+class Question2 {
+boolean[] array=new boolean[100];//=start-with-100-elements-for-fast-initialization
+  
+public void add(int key) {
+if(key>=array.length) //-->if-array-is-too-small-to-accomodate-key,-extend-it//
+extend(key);
+array[key]=true;
+}
+  
+public void remove(int key) {
+if(key>=array.length) /*-->if-array-is too--small-to-accomodate-key,-extend-it*/
+extend(key);
+array[key]=false;
+}
+  
+/*-->Returns-true-if-this-set-contains-the-specified-element<--*/
+public boolean contains(int key) {
+if(key>=array.length) //-->key-cannot-be-in array-if-length-of-array-is-less-than-key//
+return false;
+return array[key]==true;
+}
+  
+public void extend(int key){
+array= Arrays.copyOf(array, key+2); //-->extend-array--to-one-more-item-than-necessary,we-need-"key"-items.
+                                   //we-give-"key+1"-items-to-reduce--collisions.-->//
+}
+
+public static void main (String[] args)
+{
+Question2 hash_set = new Question2();
+boolean x;
+hash_set.add(1);
+hash_set.add(2);
+x=hash_set.contains(1); // returns true
+System.out.println("1 is found?-->"+x);
+x=hash_set.contains(3); // returns false (not found)
+System.out.println("3 is found?-->"+x);
+hash_set.add(2);
+hash_set.contains(2); // returns true
+System.out.println("2 is found?-->"+x);
+hash_set.remove(2);
+hash_set.contains(2); // returns false (already removed)
+System.out.println("2 is found?-->"+x);
+}
+}

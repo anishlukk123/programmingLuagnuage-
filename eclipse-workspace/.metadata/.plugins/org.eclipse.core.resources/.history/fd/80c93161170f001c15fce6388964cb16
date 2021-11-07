@@ -1,0 +1,52 @@
+package Queues;
+
+import java.util.Arrays;
+import java.util.NoSuchElementException;
+
+public class ArrayQueue {
+	private int items[];
+	int front;
+	int back;
+	int count;
+	
+	public ArrayQueue(int size)
+	{
+		items = new int[size];
+		back = size;
+
+	}
+	public void enque(int data)
+	{
+		if(isfull())
+		{
+		throw new NoSuchElementException();
+		}
+		else
+		{
+			back --;
+			 items[back] = data;
+			 count++;
+		}
+		
+	}
+	
+	public  boolean isfull() {
+		
+	 return count == items.length;
+	}
+
+	public boolean  isempty()
+	{
+		return  count  ==0;
+	}
+	
+		
+	
+	
+	
+	public String toString()
+	{
+		return  Arrays.toString(items);
+	}
+
+}

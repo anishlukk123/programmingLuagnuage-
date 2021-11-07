@@ -1,0 +1,36 @@
+package LinkedList;
+
+public class Linkedlist {
+	
+private class Node
+{
+	 int val;
+	Node next;
+	
+	public Node(int val)
+	{
+		this.val = val;
+	}
+}
+ Node head;
+ Node tail;
+
+public void addfirst(int data)
+{
+	Node node = new Node(data);
+	
+	if(head == null)
+	{
+		head = tail = node;  // setting the head and tail to
+
+	}
+	else
+	{
+		node.next = head;
+		head = node;
+	}
+
+
+}
+
+}

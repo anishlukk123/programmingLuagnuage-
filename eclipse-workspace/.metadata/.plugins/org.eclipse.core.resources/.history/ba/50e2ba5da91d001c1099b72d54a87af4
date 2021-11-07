@@ -1,0 +1,12 @@
+
+public class run {
+
+	public static void main(String[] args) {
+		
+		var  Queue = new ImplementQueueStack();
+		Queue.deque(0);
+		
+
+	}
+
+}

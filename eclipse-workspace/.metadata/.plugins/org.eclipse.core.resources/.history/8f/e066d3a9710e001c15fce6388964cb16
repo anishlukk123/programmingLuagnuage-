@@ -1,0 +1,44 @@
+package queus;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	 Queue<Integer>qs = new LinkedList<Integer>();
+ qs.add(10);
+ qs.add(20);
+ qs.add(30);
+ System.out.print(qs);
+System.out.print(reverse(qs));
+
+}
+public static Queue reverse( Queue<Integer>qs)
+{
+Stack<Integer>s = new Stack<Integer>();
+
+	if(qs.isEmpty())
+	{
+		return null ;
+	}
+	else
+		
+	{
+	 s.add(qs.remove());
+	 System.out.print(qs.remove());
+		
+for(int i =0; i>s.size();i++)	
+
+	qs.add(s.pop()); // 10 
+}
+return qs; 
+	}
+	
+}
+
+
+

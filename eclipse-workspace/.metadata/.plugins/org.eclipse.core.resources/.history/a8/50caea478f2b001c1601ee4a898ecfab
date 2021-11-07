@@ -1,0 +1,27 @@
+package application;
+
+
+import javafx.event.ActionEvent;
+
+import javafx.fxml.FXML;
+
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+public class Controller {
+	@FXML
+	ImageView imageview;
+    Button mybutton;
+	Image image1 = new Image(getClass().getResourceAsStream("picture2.jpeg"));
+	
+	
+	public void switchimage(ActionEvent e )
+	{
+		imageview.setImage(image1);
+	}
+	
+	
+	
+	
+}
+

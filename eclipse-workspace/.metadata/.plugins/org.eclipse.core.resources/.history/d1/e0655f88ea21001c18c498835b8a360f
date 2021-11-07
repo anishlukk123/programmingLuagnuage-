@@ -1,0 +1,47 @@
+package hash;
+
+import java.util.LinkedList;
+
+public class HashMapImplement {
+private class entry{
+private int key;
+private String value;
+
+	   
+	   public  entry(int key,String value)
+	   {
+		   this.key = key;
+	       this.value = value;
+	     
+	   } 
+	   
+}
+	
+	LinkedList<entry>[]s = new LinkedList[10];
+	
+	public void put(int key,String value)
+	{
+		 int index =hash(key);
+		var entry = new entry(key,value);
+		for(var entry )
+		
+		if(s== null)
+		{
+			s[index] = new LinkedList<>();
+			s[index].addLast(entry);
+		}
+	}
+	public int hash(int key)
+	{
+		return key%s.length;
+	}
+	{
+		
+	}
+
+ 
+ 
+	
+	
+	
+}

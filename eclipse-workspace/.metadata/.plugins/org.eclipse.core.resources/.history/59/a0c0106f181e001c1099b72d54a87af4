@@ -1,0 +1,27 @@
+
+public class runprogram {
+	
+	public static void main(String[] args) {
+		
+	 var PQ = new PriortyQueue();
+	 
+	 PQ.enque(1);
+	 PQ.enque(2);
+	 PQ.enque(3);
+	 PQ.enque(10);
+	 PQ.enque(5);
+	 PQ.deque();
+	 System.out.print(PQ.ToString());
+	 
+	 
+		 
+		 
+		 
+		 
+		 
+		
+
+	}
+
+
+}

@@ -1,0 +1,50 @@
+import java.util.*;
+
+import java.util.ArrayList;
+
+class Question2{
+        
+        ArrayList<Integer> set;
+        
+        public Question2() {
+                this.set = new ArrayList<Integer>();
+        }
+
+        public void add(Integer value) {
+                if(!set.contains(value))
+                        set.add(value);
+        }
+        
+        public String contains(Integer value) {
+                if(!set.contains(value)) 
+                        return "Hey Nothing there";
+                return String.valueOf(value);
+        }
+        
+        public String remove(Integer value) {
+                if(!set.contains(value)) 
+                        return "Hey value does not exist at all";
+                set.remove(value);
+                return String.valueOf(value);
+        }
+        
+        public static void main(String[] args) {
+            
+            
+        	Question2 hset = new Question2();
+            
+            hset.add(10);
+            hset.add(20);
+            hset.add(30);
+            
+            System.out.println(hset.contains(10));
+            System.out.println(hset.contains(11));
+            
+            System.out.println(hset.remove(10));
+            System.out.println(hset.contains(10));
+            System.out.println(hset.remove(10));            
+
+    }
+        
+        
+}

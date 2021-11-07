@@ -1,0 +1,95 @@
+
+public class poupulatebinarysearchtree {
+	
+	
+	private class node
+	{
+		private int value;
+		private node left;
+		private node right;
+		
+		public node(int value)
+		{
+			this.value = value;
+			left = null;
+			right = null;
+		}
+		
+	
+	}
+
+
+ node root;
+	
+	    public poupulatebinarysearchtree()
+	     {
+	    	 root  = null;
+	     }
+	    
+
+	    
+	    public void insert(int value)
+	    {
+	    
+	    	if(root == null)
+	    	{
+	    	 var node  = new node(value);
+	    		root = node;
+	    		return;
+	    	}
+	    	else
+	    	{
+	    		var node = new node(value);
+	    		var current = root;
+	    		while(current!=null)
+	    		{
+		    			if(node.value<current.value)
+			    		{
+			    			current = current.left;
+			    		}
+		    			if(current.value>root.value)
+			    		{
+			    			current = current.right;
+			    		}
+	    			
+	    		}
+	             current = node;
+	    		
+	    		}
+	    
+	    	
+	    	
+	    	
+	    	}
+	   public boolean find (int value) 
+	   {
+		   var current = root;
+   		    while(current!=null)
+   		{
+	    			if(current.value<value)
+		    		{
+		    			current = current.left;
+		    		}
+	    			if(current.value>value)
+		    		{
+		    			current = current.right;
+		    		}
+	    			if(current.value== value)
+	    			{
+	    				return true;
+	    			}
+   			
+   		}
+		   
+		   
+		   return false;
+		   
+	   }
+	    
+	    }
+	
+
+	
+
+
+

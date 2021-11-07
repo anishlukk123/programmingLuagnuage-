@@ -1,0 +1,44 @@
+package hash;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+
+
+public class uniquepairs {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[]nums = {1,7,5,12,9,3};
+		var pairs = uniquepairs(nums,2);
+		System.out.print(pairs);
+
+	}
+
+	private static int  uniquepairs(int[] nums,int k) {
+		int count =0;
+	LinkedHashSet<Integer>hs = new LinkedHashSet<Integer>();
+	
+	for(int i =0;i<nums.length;i++)
+	{
+		hs.add(nums[i]);    // 1,7,5,12,9.3
+	}                          // N 5 3 N 7 1
+	
+	for(int i =0;i<nums.length;i++)
+	{
+		int compliment = nums[i]-2;
+
+		if (hs.contains(compliment));
+		{
+			count++;
+		}
+		
+	}
+	return count;
+
+		
+		
+	}
+
+}
